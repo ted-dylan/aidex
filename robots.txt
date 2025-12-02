@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://totaro-ai.surge.sh/sitemap.xml
