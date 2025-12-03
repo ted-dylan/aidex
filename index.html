@@ -1,338 +1,399 @@
-<nav class="glass-nav">
-    <div class="nav-content">
-        <div class="logo">
-            <img src="logo.png" alt="Totaro Logo" class="logo-img">
-            <span>AI 도감</span>
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>토타로 AI 도감 - 당신의 프로젝트를 위한 AI 전문가 찾기</title>
+    <meta name="description"
+        content="토타로(Totaro) AI 도감에서 글쓰기, 코딩, 디자인, 비즈니스 등 다양한 분야의 AI 전문가를 만나보세요. 상황에 딱 맞는 AI 프롬프트와 활용법을 제공합니다.">
+    <meta name="keywords" content="AI 도감, AI 전문가, 챗GPT 활용, 프롬프트 엔지니어링, AI 글쓰기, AI 코딩, AI 디자인, 토타로, Totaro">
+    <meta name="author" content="Totaro">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://totaro-ai.surge.sh/">
+    <meta property="og:title" content="토타로 AI 도감 - 당신의 프로젝트를 위한 AI 전문가 찾기">
+    <meta property="og:description" content="글쓰기, 코딩, 슬라이드 제작, 비즈니스 등 다양한 분야의 AI 전문가들이 떠다니는 우주를 탐험하세요.">
+    <meta property="og:image" content="https://totaro-ai.surge.sh/logo.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://totaro-ai.surge.sh/">
+    <meta property="twitter:title" content="토타로 AI 도감 - 당신의 프로젝트를 위한 AI 전문가 찾기">
+    <meta property="twitter:description" content="글쓰기, 코딩, 슬라이드 제작, 비즈니스 등 다양한 분야의 AI 전문가들이 떠다니는 우주를 탐험하세요.">
+    <meta property="twitter:image" content="https://totaro-ai.surge.sh/logo.png">
+
+    <!-- JSON-LD Structured Data for AEO/GEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "토타로 AI 도감 (Totaro AI Pokedex)",
+      "applicationCategory": "ProductivityApplication",
+      "operatingSystem": "Web",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "KRW"
+      },
+      "description": "다양한 분야의 AI 전문가 페르소나를 모아놓은 도감 서비스입니다. 사용자는 자신의 상황에 맞는 AI를 찾아 프롬프트를 얻고 대화할 수 있습니다.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "1250"
+      },
+      "featureList": [
+        "Slide-디렉터: PPT 생성 자문",
+        "카피라이팅 연금술사: 마케팅 문구 작성",
+        "Site-빌더: 웹사이트 구축 코딩",
+        "Biz-아키텍트: 사업계획서 작성",
+        "ChatNews Sphere: 뉴스 및 트렌드 분석"
+      ]
+    }
+    </script>
+
+    <link rel="canonical" href="https://totaro-ai.surge.sh/">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <nav class="glass-nav">
+        <div class="nav-content">
+            <div class="logo">
+                <img src="logo.png" alt="Totaro Logo" class="logo-img">
+                <span>AI 도감</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#pokedex">AI 도감</a></li>
+                <li><a href="#how-it-works">사용법</a></li>
+                <li><a href="#use-cases">활용 사례</a></li>
+                <li><a href="#about">소개</a></li>
+            </ul>
+            <button class="btn-secondary small">AI 실행하기</button>
         </div>
-        <ul class="nav-links">
-            <li><a href="#pokedex">AI 도감</a></li>
-            <li><a href="#how-it-works">사용법</a></li>
-            <li><a href="#use-cases">활용 사례</a></li>
-            <li><a href="#about">소개</a></li>
-        </ul>
-        <button class="btn-secondary small">AI 실행하기</button>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>토타로 <br><span class="gradient-text">AI 도감</span></h1>
+                    <p>글쓰기, 코딩, 슬라이드 제작, 비즈니스 등 다양한 분야의 AI 전문가들이 떠다니는 우주를 탐험하세요.</p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary">AI 도감 보기</button>
+                        <button class="btn-secondary">랜덤 AI 실행</button>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-core-floater">
+                        <div class="core-hologram"></div>
+                        <h3>오늘의 AI</h3>
+                        <div class="today-ai-content">
+                            <img src="chatnews_sphere.jpg" alt="ChatNews Sphere" class="today-ai-img">
+                            <p>ChatNews Sphere</p>
+                        </div>
+                        <button class="btn-primary large" id="hero-profile-btn">프로필 보기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pokedex Section -->
+        <section id="pokedex" class="pokedex-section">
+            <div class="section-header">
+                <h2>AI <span class="gradient-text">스페셜리스트</span> 도감</h2>
+                <p>당신의 프로젝트를 도와줄 최고의 AI 전문가들을 만나보세요.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar">
+                <button class="filter-chip active" data-category="all">전체</button>
+                <button class="filter-chip" data-category="creative">크리에이티브</button>
+                <button class="filter-chip" data-category="business">비즈니스</button>
+                <button class="filter-chip" data-category="dev">개발/데이터</button>
+            </div>
+
+            <!-- AI Grid -->
+            <div class="ai-grid">
+                <!-- Card 1: Slide-디렉터 -->
+                <div class="ai-card glass-card" data-category="business">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="slide_director.png" alt="Slide-디렉터">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Slide-디렉터</h3>
+                        <span class="role-badge">PPT 생성</span>
+                        <p>설득력 있는 프레젠테이션 구조와 디자인을 제안하는 비즈니스 파트너입니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 2: 카피라이팅 연금술사 -->
+                <div class="ai-card glass-card" data-category="creative">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="copywriting_alchemist.png" alt="카피라이팅 연금술사">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>카피라이팅 연금술사</h3>
+                        <span class="role-badge">마케팅</span>
+                        <p>고객의 마음을 사로잡는 매력적인 문구를 연성해내는 글쓰기 전문가입니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 3: Site-빌더 -->
+                <div class="ai-card glass-card" data-category="dev">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="site_builder.png" alt="Site-빌더">
+                        </div>
+                        <div class="status-indicator idle"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Site-빌더</h3>
+                        <span class="role-badge">웹 개발</span>
+                        <p>기획부터 코드까지, 웹사이트 구축의 전 과정을 리드하는 풀스택 개발자입니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 4: Biz-아키텍트 -->
+                <div class="ai-card glass-card" data-category="business">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="biz_architect.png" alt="Biz-아키텍트">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Biz-아키텍트</h3>
+                        <span class="role-badge">기획</span>
+                        <p>체계적이고 논리적인 사업계획서 작성을 도와주는 전략 기획가입니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 5: Gov-스카우터 -->
+                <div class="ai-card glass-card" data-category="business">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="gov_scouter.png" alt="Gov-스카우터">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Gov-스카우터</h3>
+                        <span class="role-badge">정부지원</span>
+                        <p>복잡한 정부지원 사업 공고를 분석하고 최적의 매칭을 제안합니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 6: Event-플래너 -->
+                <div class="ai-card glass-card" data-category="creative">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="event_planner.png" alt="Event-플래너">
+                        </div>
+                        <div class="status-indicator idle"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Event-플래너</h3>
+                        <span class="role-badge">기획/행사</span>
+                        <p>성공적인 행사를 위한 타임라인, 예산, 프로그램 기획을 지원합니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 7: Promo-감독 -->
+                <div class="ai-card glass-card" data-category="creative">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="promo_director.png" alt="Promo-감독">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>Promo-감독</h3>
+                        <span class="role-badge">영상/마케팅</span>
+                        <p>시선을 사로잡는 홍보 영상 콘티와 연출 팁을 제공하는 크리에이티브 디렉터.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 8: AI 스캐너 -->
+                <div class="ai-card glass-card" data-category="dev">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="ai_scanner.png" alt="AI 스캐너">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>AI 스캐너</h3>
+                        <span class="role-badge">분석</span>
+                        <p>최신 AI 트렌드와 기술 정보를 실시간으로 수집하고 분석합니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 9: 바이브 메이커 -->
+                <div class="ai-card glass-card" data-category="creative">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="vibe_maker.png" alt="바이브 메이커">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>바이브 메이커</h3>
+                        <span class="role-badge">엔터테인먼트</span>
+                        <p>분위기를 띄우는 음악, 조명, 콘텐츠 큐레이션을 담당합니다.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+
+                <!-- Card 10: ChatNews Sphere -->
+                <div class="ai-card glass-card" data-category="insight">
+                    <div class="card-visual">
+                        <div class="ai-avatar">
+                            <img src="chatnews_sphere.jpg" alt="ChatNews Sphere">
+                        </div>
+                        <div class="status-indicator online"></div>
+                    </div>
+                    <div class="card-content">
+                        <h3>ChatNews Sphere</h3>
+                        <span class="role-badge">뉴스/인사이트</span>
+                        <p>실시간 뉴스 요약과 트렌드 큐레이션을 제공하는 대화형 뉴스 구체.</p>
+                        <button class="btn-outline">프로필 보기</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section id="how-it-works" class="info-section">
+            <div class="section-header">
+                <h2>사용 <span class="gradient-text">방법</span></h2>
+            </div>
+            <div class="steps-container">
+                <div class="step-card glass-card">
+                    <div class="step-number">01</div>
+                    <h3>AI 선택</h3>
+                    <p>도감에서 필요한 능력을 가진 AI를 찾아보세요.</p>
+                </div>
+                <div class="step-number-connector"></div>
+                <div class="step-card glass-card">
+                    <div class="step-number">02</div>
+                    <h3>대화 시작</h3>
+                    <p>선택한 AI와 대화를 시작하여 업무를 지시하세요.</p>
+                </div>
+                <div class="step-number-connector"></div>
+                <div class="step-card glass-card">
+                    <div class="step-number">03</div>
+                    <h3>결과물 확인</h3>
+                    <p>AI가 생성한 고품질의 결과물을 확인하고 활용하세요.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Use Cases Section -->
+        <section id="use-cases" class="info-section alt-bg">
+            <div class="section-header">
+                <h2>활용 <span class="gradient-text">사례</span></h2>
+            </div>
+            <div class="use-cases-grid">
+                <div class="use-case-item glass-card">
+                    <h3>스타트업 피칭</h3>
+                    <p>Slide-디렉터와 함께 투자자를 사로잡는 IR 자료 제작</p>
+                </div>
+                <div class="use-case-item glass-card">
+                    <h3>SNS 마케팅</h3>
+                    <p>카피라이팅 연금술사로 클릭을 부르는 광고 문구 완성</p>
+                </div>
+                <div class="use-case-item glass-card">
+                    <h3>랜딩 페이지</h3>
+                    <p>Site-빌더를 통해 하루 만에 고퀄리티 랜딩 페이지 런칭</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="glass-card about-card">
+                <h2>About <span class="gradient-text">Totaro</span></h2>
+                <p>우리는 중력을 거스르는 듯한 가벼움으로, 당신의 업무 부담을 덜어드립니다. <br>최첨단 AI 기술로 비즈니스의 한계를 뛰어넘으세요.</p>
+            </div>
+            </div>
+            </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Profile Modal -->
+    <div id="profile-modal" class="modal-overlay">
+        <div class="modal-content glass-card">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="modal-avatar">
+                        <img src="" alt="AI Avatar" id="modal-img">
+                    </div>
+                    <div class="modal-title-info">
+                        <h2 id="modal-name">AI Name</h2>
+                        <span class="role-badge" id="modal-role">Role</span>
+                        <p id="modal-desc">One line description</p>
+                    </div>
+                </div>
+                <div class="modal-details">
+                    <div class="detail-section">
+                        <h3>💡 잘하는 일</h3>
+                        <ul id="modal-skills"></ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>🎯 추천 사용자</h3>
+                        <p id="modal-target"></p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>🗣️ 말투/성격</h3>
+                        <p id="modal-tone"></p>
+                    </div>
+                    <div class="detail-section">
+                        <h3>🚀 활용 시나리오</h3>
+                        <ul id="modal-scenarios"></ul>
+                    </div>
+                    <div class="detail-section">
+                        <h3>💬 예시 프롬프트</h3>
+                        <ul id="modal-prompts"></ul>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-primary" id="modal-action-btn">이 AI와 대화하기</button>
+                </div>
+            </div>
+        </div>
     </div>
-</nav>
 
-<main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>토타로 <br><span class="gradient-text">AI 도감</span></h1>
-                <p>글쓰기, 코딩, 슬라이드 제작, 비즈니스 등 다양한 분야의 AI 전문가들이 떠다니는 우주를 탐험하세요.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary">AI 도감 보기</button>
-                    <button class="btn-secondary">랜덤 AI 실행</button>
-                </div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <span>AI 도감</span>
             </div>
-            <div class="hero-visual">
-                <div class="ai-core-floater">
-                    <div class="core-hologram"></div>
-                    <h3>오늘의 AI</h3>
-                    <div class="today-ai-content">
-                        <img src="chatnews_sphere.jpg" alt="ChatNews Sphere" class="today-ai-img">
-                        <p>ChatNews Sphere</p>
-                    </div>
-                    <button class="btn-primary large" id="hero-profile-btn">프로필 보기</button>
-                </div>
-            </div>
+            <p class="copyright">© 2025 Totaro AI Pokedex. All rights reserved.</p>
         </div>
-    </section>
+    </footer>
 
-    <!-- Pokedex Section -->
-    <section id="pokedex" class="pokedex-section">
-        <div class="section-header">
-            <h2>AI <span class="gradient-text">스페셜리스트</span> 도감</h2>
-            <p>당신의 프로젝트를 도와줄 최고의 AI 전문가들을 만나보세요.</p>
-        </div>
-
-        <!-- Filter Bar -->
-        <div class="filter-bar">
-            <button class="filter-chip active" data-category="all">전체</button>
-            <button class="filter-chip" data-category="creative">크리에이티브</button>
-            <button class="filter-chip" data-category="business">비즈니스</button>
-            <button class="filter-chip" data-category="dev">개발/데이터</button>
-        </div>
-
-        <!-- AI Grid -->
-        <div class="ai-grid">
-            <!-- Card 1: Slide-디렉터 -->
-            <div class="ai-card glass-card" data-category="business">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="slide_director.png" alt="Slide-디렉터">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>Slide-디렉터</h3>
-                    <span class="role-badge">PPT 생성</span>
-                    <p>설득력 있는 프레젠테이션 구조와 디자인을 제안하는 비즈니스 파트너입니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 2: 카피라이팅 연금술사 -->
-            <div class="ai-card glass-card" data-category="creative">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="copywriting_alchemist.png" alt="카피라이팅 연금술사">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>카피라이팅 연금술사</h3>
-                    <span class="role-badge">마케팅</span>
-                    <p>고객의 마음을 사로잡는 매력적인 문구를 연성해내는 글쓰기 전문가입니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 3: Site-빌더 -->
-            <div class="ai-card glass-card" data-category="dev">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="site_builder.png" alt="Site-빌더">
-                    </div>
-                    <div class="status-indicator idle"></div>
-                </div>
-                <div class="card-content">
-                    <h3>Site-빌더</h3>
-                    <span class="role-badge">웹 개발</span>
-                    <p>기획부터 코드까지, 웹사이트 구축의 전 과정을 리드하는 풀스택 개발자입니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 4: Biz-아키텍트 -->
-            <div class="ai-card glass-card" data-category="business">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="biz_architect.png" alt="Biz-아키텍트">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>Biz-아키텍트</h3>
-                    <span class="role-badge">기획</span>
-                    <p>체계적이고 논리적인 사업계획서 작성을 도와주는 전략 기획가입니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 5: Gov-스카우터 -->
-            <div class="ai-card glass-card" data-category="business">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="gov_scouter.png" alt="Gov-스카우터">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>Gov-스카우터</h3>
-                    <span class="role-badge">정부지원</span>
-                    <p>복잡한 정부지원 사업 공고를 분석하고 최적의 매칭을 제안합니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 6: Event-플래너 -->
-            <div class="ai-card glass-card" data-category="creative">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="event_planner.png" alt="Event-플래너">
-                    </div>
-                    <div class="status-indicator idle"></div>
-                </div>
-                <div class="card-content">
-                    <h3>Event-플래너</h3>
-                    <span class="role-badge">기획/행사</span>
-                    <p>성공적인 행사를 위한 타임라인, 예산, 프로그램 기획을 지원합니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 7: Promo-감독 -->
-            <div class="ai-card glass-card" data-category="creative">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="promo_director.png" alt="Promo-감독">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>Promo-감독</h3>
-                    <span class="role-badge">영상/마케팅</span>
-                    <p>시선을 사로잡는 홍보 영상 콘티와 연출 팁을 제공하는 크리에이티브 디렉터.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 8: AI 스캐너 -->
-            <div class="ai-card glass-card" data-category="dev">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="ai_scanner.png" alt="AI 스캐너">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>AI 스캐너</h3>
-                    <span class="role-badge">분석</span>
-                    <p>최신 AI 트렌드와 기술 정보를 실시간으로 수집하고 분석합니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 9: 바이브 메이커 -->
-            <div class="ai-card glass-card" data-category="creative">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="vibe_maker.png" alt="바이브 메이커">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>바이브 메이커</h3>
-                    <span class="role-badge">엔터테인먼트</span>
-                    <p>분위기를 띄우는 음악, 조명, 콘텐츠 큐레이션을 담당합니다.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-
-            <!-- Card 10: ChatNews Sphere -->
-            <div class="ai-card glass-card" data-category="insight">
-                <div class="card-visual">
-                    <div class="ai-avatar">
-                        <img src="chatnews_sphere.jpg" alt="ChatNews Sphere">
-                    </div>
-                    <div class="status-indicator online"></div>
-                </div>
-                <div class="card-content">
-                    <h3>ChatNews Sphere</h3>
-                    <span class="role-badge">뉴스/인사이트</span>
-                    <p>실시간 뉴스 요약과 트렌드 큐레이션을 제공하는 대화형 뉴스 구체.</p>
-                    <button class="btn-outline">프로필 보기</button>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- How It Works Section -->
-    <section id="how-it-works" class="info-section">
-        <div class="section-header">
-            <h2>사용 <span class="gradient-text">방법</span></h2>
-        </div>
-        <div class="steps-container">
-            <div class="step-card glass-card">
-                <div class="step-number">01</div>
-                <h3>AI 선택</h3>
-                <p>도감에서 필요한 능력을 가진 AI를 찾아보세요.</p>
-            </div>
-            <div class="step-number-connector"></div>
-            <div class="step-card glass-card">
-                <div class="step-number">02</div>
-                <h3>대화 시작</h3>
-                <p>선택한 AI와 대화를 시작하여 업무를 지시하세요.</p>
-            </div>
-            <div class="step-number-connector"></div>
-            <div class="step-card glass-card">
-                <div class="step-number">03</div>
-                <h3>결과물 확인</h3>
-                <p>AI가 생성한 고품질의 결과물을 확인하고 활용하세요.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Use Cases Section -->
-    <section id="use-cases" class="info-section alt-bg">
-        <div class="section-header">
-            <h2>활용 <span class="gradient-text">사례</span></h2>
-        </div>
-        <div class="use-cases-grid">
-            <div class="use-case-item glass-card">
-                <h3>스타트업 피칭</h3>
-                <p>Slide-디렉터와 함께 투자자를 사로잡는 IR 자료 제작</p>
-            </div>
-            <div class="use-case-item glass-card">
-                <h3>SNS 마케팅</h3>
-                <p>카피라이팅 연금술사로 클릭을 부르는 광고 문구 완성</p>
-            </div>
-            <div class="use-case-item glass-card">
-                <h3>랜딩 페이지</h3>
-                <p>Site-빌더를 통해 하루 만에 고퀄리티 랜딩 페이지 런칭</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="glass-card about-card">
-            <h2>About <span class="gradient-text">Totaro</span></h2>
-            <p>우리는 중력을 거스르는 듯한 가벼움으로, 당신의 업무 부담을 덜어드립니다. <br>최첨단 AI 기술로 비즈니스의 한계를 뛰어넘으세요.</p>
-        </div>
-        </div>
-        </div>
-        </div>
-    </section>
-
-</main>
-
-<!-- Profile Modal -->
-<div id="profile-modal" class="modal-overlay">
-    <div class="modal-content glass-card">
-        <button class="modal-close">&times;</button>
-        <div class="modal-body">
-            <div class="modal-header">
-                <div class="modal-avatar">
-                    <img src="" alt="AI Avatar" id="modal-img">
-                </div>
-                <div class="modal-title-info">
-                    <h2 id="modal-name">AI Name</h2>
-                    <span class="role-badge" id="modal-role">Role</span>
-                    <p id="modal-desc">One line description</p>
-                </div>
-            </div>
-            <div class="modal-details">
-                <div class="detail-section">
-                    <h3>💡 잘하는 일</h3>
-                    <ul id="modal-skills"></ul>
-                </div>
-                <div class="detail-section">
-                    <h3>🎯 추천 사용자</h3>
-                    <p id="modal-target"></p>
-                </div>
-                <div class="detail-section">
-                    <h3>🗣️ 말투/성격</h3>
-                    <p id="modal-tone"></p>
-                </div>
-                <div class="detail-section">
-                    <h3>🚀 활용 시나리오</h3>
-                    <ul id="modal-scenarios"></ul>
-                </div>
-                <div class="detail-section">
-                    <h3>💬 예시 프롬프트</h3>
-                    <ul id="modal-prompts"></ul>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn-primary" id="modal-action-btn">이 AI와 대화하기</button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-logo">
-            <span>AI 도감</span>
-        </div>
-        <p class="copyright">© 2025 Totaro AI Pokedex. All rights reserved.</p>
-    </div>
-</footer>
-
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
