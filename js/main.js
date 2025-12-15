@@ -153,7 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 "수출 SaaS 서비스를 위한 랜딩페이지 히어로 섹션 카피 3개만 만들어줘.",
                 "이 회사 소개 문단을 홈페이지 About 섹션용 3문단 카피로 줄여줘."
             ],
-            img: "copywriting_alchemist.png"
+            img: "copywriting_alchemist.png",
+            link: "https://copy.totaro.co.kr"
         },
         "Site-빌더": {
             name: "Site-빌더",
